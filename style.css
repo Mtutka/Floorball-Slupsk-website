@@ -1,0 +1,622 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+/* HEADER*/
+
+header {
+    background-image: url(img/header.jpg);
+    background-attachment: fixed;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+
+}
+
+
+nav.menu {
+    display: none;
+}
+
+img.logo {
+    border-radius: 50%;
+    opacity: 70%;
+    position: absolute;
+    width: 15%;
+    right: 10%;
+    top: 10%;
+
+}
+
+h1.floorball {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    text-align: center;
+    color: white;
+    font-size: 70px;
+    font-family: arial;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    padding: 20px 0;
+    letter-spacing: 3px;
+
+}
+
+@media (orientation: portrait) {
+    header {
+        background-position: center;
+    }
+
+    img.logo {
+        width: 25%;
+    }
+
+    h1.floorball {
+        font-size: 30px;
+    }
+}
+
+/*SECTION*/
+
+
+section {
+    margin: 100px 10% 0;
+    text-align: justify;
+    font-family: arial;
+    line-height: 1.7;
+    z-index: -1;
+}
+
+/* 
+}
+
+div.blok {
+    width: 80%;
+    height: 30vw;
+    background-color: rgba(140, 30, 30, 0.6);
+    margin: 40px;
+    position: relative;
+
+
+}
+
+.descrip {
+    top: 2.5vw;
+    left: 30vw;
+    right: 2.5vw;
+    position: absolute;
+}
+
+
+div.foto1 {
+    background-image: url(img/galeria1.jpg);
+    width: 25vw;
+    height: 25vw;
+    top: 2.5vw;
+    left: 2.5vw;
+    padding: 40px;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+}
+
+div.foto2 {
+    background-image: url(img/galeria2.jpg);
+    width: 25vw;
+    height: 25vw;
+    top: 2.5vw;
+    left: 2.5vw;
+    padding: 40px;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+}
+
+div.foto3 {
+    background-image: url(img/galeria3.jpg);
+    width: 25vw;
+    height: 25vw;
+    top: 2.5vw;
+    left: 2.5vw;
+    padding: 40px;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+}
+
+div.foto4 {
+    background-image: url(img/galeria4.jpg);
+    width: 25vw;
+    height: 25vw;
+    top: 2.5vw;
+    left: 2.5vw;
+    padding: 40px;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+}
+
+div.foto5 {
+    background-image: url(img/galeria5.jpg);
+    width: 25vw;
+    height: 25vw;
+    top: 2.5vw;
+    left: 2.5vw;
+    padding: 40px;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+}
+
+div.foto6 {
+    background-image: url(img/galeria6.jpg);
+    width: 25vw;
+    height: 25vw;
+    top: 2.5vw;
+    left: 2.5vw;
+    padding: 40px;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+}
+ */
+
+
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+section div.cssbox {
+    width: 33%;
+    height: 33%;
+    padding: 20px 10px;
+    display: inline-block;
+    text-align: center;
+    /* float: left; */
+
+}
+
+.thumb {
+    width: 90%;
+    height: 90%;
+}
+
+@media (max-width: 1230px) {
+    section {
+        margin: 100px 20% 0;
+    }
+
+    section div.cssbox {
+        width: 48%;
+        height: 48%;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        margin: 100px 20% 0;
+    }
+
+    section div.cssbox {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+span.cssbox_full {
+    z-index: 999;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s linear;
+}
+
+span.cssbox_full img {
+    position: fixed;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    max-height: 90%;
+    max-width: 90%;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px black;
+}
+
+a.cssbox_close,
+a.cssbox_prev,
+a.cssbox_next {
+    z-index: 999;
+    position: fixed;
+    text-decoration: none;
+    visibility: hidden;
+    color: white;
+    font-size: 36px;
+}
+
+a.cssbox_close {
+    top: 1%;
+    right: 1%
+}
+
+a.cssbox_close::after {
+    content: '\00d7';
+}
+
+a.cssbox_prev,
+a.cssbox_next {
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+a.cssbox_prev {
+    left: 5%;
+}
+
+a.cssbox_next {
+    right: 5%;
+}
+
+a:target~a.cssbox_close,
+a:target~a.cssbox_prev,
+a:target~a.cssbox_next {
+    visibility: visible;
+}
+
+a:target>img.thumb+span.cssbox_full {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: initial;
+}
+
+
+span.cssbox_full {
+    cursor: initial;
+}
+
+
+/*FOOTER*/
+
+section.contact {
+    border-top: 2px solid white;
+    padding: 30px;
+}
+
+a.facebook {
+    text-decoration: none;
+    color: #cdcdcd;
+}
+
+p.facebook {
+    text-decoration: none;
+    color: #cdcdcd;
+    display: inline-block;
+
+    transition: color 0.3s ease;
+}
+
+p.facebook:hover a {
+    color: firebrick;
+}
+
+p.facebook:hover i {
+    color: firebrick;
+}
+
+
+i {
+    color: #cdcdcd;
+
+
+}
+
+@media (max-width: 400px) {
+    .contact {
+        font-size: 12px;
+    }
+}
+
+/*NAWIGACJA*/
+nav {
+    position: fixed;
+    z-index: 3;
+}
+
+body {
+
+    background: #232323;
+    color: #cdcdcd;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+
+a.nav {
+    text-decoration: none;
+    color: #232323;
+
+
+    transition: color 0.3s ease;
+}
+
+a.nav:hover {
+    color: firebrick;
+}
+
+.menuToggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    z-index: 2;
+
+    -webkit-touch-callout: none;
+}
+
+
+.menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #fff;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+}
+
+.menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+.menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+.menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+}
+
+.menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+.menu {
+    position: absolute;
+    width: 180px;
+    margin: -100px 0 0 -50px;
+    padding: 50px 50px 0 20px;
+    padding-top: 125px;
+    height: 130vh;
+
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+.menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+
+.menuToggle input:checked~ul {
+    transform: none;
+}
+
+
+ul li i {
+    margin-right: 10px;
+    font-size: 24px;
+    color: lightslategray;
+
+}
+
+nav ul li:nth-last-child(1) {
+    border-right: 0 solid black;
+
+}
+
+
+nav ul li a:hover i {
+    color: firebrick;
+
+}
+
+
+nav ul li a:hover {
+    color: firebrick;
+
+}
+
+/* sekcja meetus */
+
+
+
+.meetus {
+    background-color: #232323;
+    padding: 10px 0 30px;
+}
+
+.meetus h1 {
+    font-size: 28px;
+    font-family: 'Saira Condensed',
+        sans-serif;
+    text-transform: uppercase;
+    color: #cdcdcd;
+    text-align: center;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+}
+
+.meetus .web img {
+    width: 100%;
+    max-height: 500px;
+}
+
+.meetus .about {
+    color: #cdcdcd;
+    font-family: 'Saira',
+        sans-serif;
+    font-weight: normal;
+    padding: 10px 20px 20px 0;
+    text-align: left;
+}
+
+.meetus .about h2 {
+    font-size: 18px;
+    border-bottom: 2px solid #cdcdcd;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    text-indent: 20px;
+}
+
+.meetus .about p {
+    font-size: 12px;
+    padding-left: 20px;
+}
+
+.meetus .project {
+    max-width: 1400px;
+    margin: 0 auto 20px;
+}
+
+.meetus .project:nth-of-type(odd) {
+    background-color: #c02d2d;
+}
+
+.meetus .project:nth-of-type(even) {
+    background-color: #1851bb;
+}
+
+@media (min-width:768px) {
+
+    .meetus h1 {
+        font-size: 40px;
+    }
+
+    .meetus .about h2 {
+        font-size: 28px;
+        text-indent: 40px;
+    }
+
+    .meetus .about p {
+        font-size: 18px;
+        padding-left: 40px;
+    }
+
+    .meetus .project {
+        margin-bottom: 40px;
+    }
+
+}
+
+@media (orientation: landscape) {
+
+    .web,
+    .about {
+        width: 50%;
+        float: left;
+    }
+
+    .web img {
+        display: block;
+    }
+
+    .meetus .project:nth-of-type(even) .web {
+        float: right;
+
+    }
+
+    .meetus .project:nth-of-type(even) .about {
+        padding-right: 0;
+    }
+
+    .meetus .project:nth-of-type(even) .about p {
+        padding-right: 20px;
+    }
+
+    .meetus .project:nth-of-type(even) .about h2 {
+        text-indent: 0;
+        margin-left: 40px;
+    }
+
+
+}
+
+
+@media (orientation: landscape) and (min-width: 1400px) {
+    .meetus h1 {
+        font-size: 60px;
+        padding: 30px 0;
+    }
+
+    .meetus .about h2 {
+        padding-top: 50px;
+        font-size: 28px;
+        text-indent: 40px;
+        margin-bottom: 50px;
+    }
+
+    .meetus .about p {
+        font-size: 18px;
+        padding-left: 40px;
+        line-height: 180%;
+    }
+
+    .meetus .project {
+        margin-bottom: 40px;
+    }
+}
