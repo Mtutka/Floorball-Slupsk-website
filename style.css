@@ -11,7 +11,7 @@ img {
 /* HEADER*/
 
 header {
-    background-image: url(img/header.jpg);
+    background-image: url(header.jpg);
     background-attachment: fixed;
     width: 100%;
     background-repeat: no-repeat;
@@ -75,102 +75,6 @@ section {
     line-height: 1.7;
     z-index: -1;
 }
-
-/* 
-}
-
-div.blok {
-    width: 80%;
-    height: 30vw;
-    background-color: rgba(140, 30, 30, 0.6);
-    margin: 40px;
-    position: relative;
-
-
-}
-
-.descrip {
-    top: 2.5vw;
-    left: 30vw;
-    right: 2.5vw;
-    position: absolute;
-}
-
-
-div.foto1 {
-    background-image: url(img/galeria1.jpg);
-    width: 25vw;
-    height: 25vw;
-    top: 2.5vw;
-    left: 2.5vw;
-    padding: 40px;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-}
-
-div.foto2 {
-    background-image: url(img/galeria2.jpg);
-    width: 25vw;
-    height: 25vw;
-    top: 2.5vw;
-    left: 2.5vw;
-    padding: 40px;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-}
-
-div.foto3 {
-    background-image: url(img/galeria3.jpg);
-    width: 25vw;
-    height: 25vw;
-    top: 2.5vw;
-    left: 2.5vw;
-    padding: 40px;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-}
-
-div.foto4 {
-    background-image: url(img/galeria4.jpg);
-    width: 25vw;
-    height: 25vw;
-    top: 2.5vw;
-    left: 2.5vw;
-    padding: 40px;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-}
-
-div.foto5 {
-    background-image: url(img/galeria5.jpg);
-    width: 25vw;
-    height: 25vw;
-    top: 2.5vw;
-    left: 2.5vw;
-    padding: 40px;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-}
-
-div.foto6 {
-    background-image: url(img/galeria6.jpg);
-    width: 25vw;
-    height: 25vw;
-    top: 2.5vw;
-    left: 2.5vw;
-    padding: 40px;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-}
- */
-
-
 
 .clearfix::after {
     content: "";
